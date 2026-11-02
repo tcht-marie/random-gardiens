@@ -8,13 +8,18 @@ export interface ParticipantsByCategory {
   others: string[]
 }
 
-export interface DrawnParticipant {
-  category: ParticipantCategory
+export interface DrawnParticipant<Category extends ParticipantCategory> {
+  category: Category
   name: string
 }
 
+export type Draw = readonly [
+  DrawnParticipant<'app'>,
+  DrawnParticipant<'web'>,
+  DrawnParticipant<'others'>,
+]
+
 export interface DrawHistory {
   id: string
-  createdAt: string
-  participants: DrawnParticipant[]
+  participants: Draw
 }

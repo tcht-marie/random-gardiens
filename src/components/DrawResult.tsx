@@ -11,9 +11,6 @@ export default function DrawResult({history, categoryLabels}: {
                     <article className="draw-card">
                         <header className="draw-card-header">
                             <h3>Tirage {index + 1}</h3>
-                            <time dateTime={draw.createdAt}>
-                                {new Date(draw.createdAt).toLocaleString('fr-FR')}
-                            </time>
                         </header>
                         <ul className="draw-participants">
                             {draw.participants.map(({category, name}) => (

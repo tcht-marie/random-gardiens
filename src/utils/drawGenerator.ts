@@ -1,17 +1,18 @@
 import {
-  participantCategories,
-  type DrawnParticipant,
+  type Draw,
+  type ParticipantCategory,
   type ParticipantsByCategory,
 } from '../types/draw'
 
 export function generateDraws(
   participants: ParticipantsByCategory,
-): DrawnParticipant[][] {
+): Draw[] {
   const seenPeople = new Set<string>()
-  const shuffledGroups = participantCategories.map((category) => {
+  const numberDraw = 7
+  function shuffleCategory(category: ParticipantCategory): string[] {
     const people = [...participants[category]]
 
-    if (people.length !== 7) {
+    if (people.length !== numberDraw) {
       throw new Error(
         `La catégorie ${category} doit contenir exactement 7 participants pour générer les 7 tirages.`,
       )
@@ -31,13 +32,18 @@ export function generateDraws(
       ;[people[index], people[randomIndex]] = [people[randomIndex], people[index]]
     }
 
-    return { category, people }
-  })
+    return people
+  }
 
-  return Array.from({ length: 7 }, (_, index) =>
-    shuffledGroups.map(({ category, people }) => ({
-      category,
-      name: people[index],
-    })),
-  )
+  const shuffledGroups: ParticipantsByCategory = {
+    app: shuffleCategory('app'),
+    web: shuffleCategory('web'),
+    others: shuffleCategory('others'),
+  }
+
+  return Array.from({ length: numberDraw }, (_, index): Draw => [
+    { category: 'app', name: shuffledGroups.app[index] },
+    { category: 'web', name: shuffledGroups.web[index] },
+    { category: 'others', name: shuffledGroups.others[index] },
+  ])
 }

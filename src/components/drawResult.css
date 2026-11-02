@@ -1,16 +1,16 @@
 .draw-history {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1em;
-    margin: 2em auto 0;
+    gap: 1rem;
+    margin: 2rem auto 0;
     padding: 0;
     list-style: none;
 }
 
 .draw-card {
-    border: 0.1em solid var(--border);
-    border-radius: 0.66em;
-    padding: 1.33em;
+    border: 0.062rem solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
     text-align: left;
 }
 
@@ -18,8 +18,8 @@
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    gap: 1em;
-    margin-bottom: 1em;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .draw-card-header h3 {
@@ -31,13 +31,13 @@
 
 .draw-card-header time {
     color: var(--text);
-    font-size: 0.722em;
+    font-size: 0.75em;
 }
 
 .draw-participants {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.66em;
+    gap: 0.75rem;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -46,17 +46,31 @@
 .draw-participants li {
     display: inline-flex;
     align-items: center;
-    gap: 0.66em;
-    border: 0.1em solid var(--accent-border);
-    border-radius: 0.5em;
-    padding: 0.66em 1.15em;
+    gap: 0.75rem;
+    border: 0.062rem solid var(--accent-border);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.12rem;
     color: var(--text-h);
     background: var(--accent-bg);
 }
 
 .draw-participants span {
-    border-right: 0.1em solid var(--accent-border);
-    padding-right: 0.66em;
-    font-size: 0.667em;
+    border-right: 0.062rem solid var(--accent-border);
+    padding-right: 0.5rem;
+    font-size: 0.75em;
     font-weight: 700;
+}
+
+@media (width <= 900px) {
+    .draw-history {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (width <= 600px) {
+    .draw-history {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }

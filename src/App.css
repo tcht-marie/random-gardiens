@@ -4,42 +4,31 @@
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-  padding: 2.667em 1.333em;
+  padding: 2.75rem 1.25rem;
 }
 
 .draw-form {
   display: flex;
   flex-direction: column;
-  gap: 0.667em;
-  width: min(100%, 28.889em);
+  gap: 0.75rem;
+  width: min(100%, 29rem);
   text-align: left;
 }
 
-.draw-form h1,
 .draw-form > p {
   text-align: center;
 }
 
-.draw-form h1 {
-  margin-bottom: 0.071em;
-}
-
 .draw-form > p {
-  margin-bottom: 0.667em;
-}
-
-.draw-form label {
-  color: var(--text-h);
-  font-size: 0.833em;
-  font-weight: 600;
+  margin-bottom: 0.75rem;
 }
 
 .draw-form button {
   align-self: center;
-  margin-top: 0.444em;
-  border: 0.056em solid var(--accent-border);
-  border-radius: 0.333em;
-  padding: 0.667em 1.111em;
+  margin-top: 0.5rem;
+  border: 0.062rem solid var(--accent-border);
+  border-radius: 0.37rem;
+  padding: 0.75rem 1.12rem;
   color: var(--text-h);
   background: var(--accent-bg);
   font: inherit;
@@ -52,18 +41,18 @@
 }
 
 .draw-form button:focus-visible {
-  outline: 0.111em solid var(--accent);
-  outline-offset: 0.111em;
+  outline: 0.12rem solid var(--accent);
+  outline-offset: 0.12rem;
 }
 
 #next-steps {
-  border-top: 0.056em solid var(--border);
-  padding: 1.778em;
+  border-top: 0.062rem solid var(--border);
+  padding: 1.75rem;
   text-align: center;
 }
 
 .draw-results h2 {
-  margin-bottom: 0.667em;
+  margin-bottom: 0.87rem;
 }
 
 .draw-message {
@@ -75,8 +64,8 @@
 }
 
 #spacer {
-  height: 2.667em;
-  border-top: 0.056em solid var(--border);
+  height: 2.75rem;
+  border-top: 0.062rem solid var(--border);
 }
 
 .ticks {
@@ -87,8 +76,8 @@
 .ticks::before,
 .ticks::after {
   position: absolute;
-  top: -0.25em;
-  border: 0.278em solid transparent;
+  top: -0.25rem;
+  border: 0.32rem solid transparent;
   content: '';
 }
 
@@ -104,16 +93,16 @@
 
 @media (max-width: 40em) {
   #center {
-    padding: 2em 1.25em;
+    padding: 2rem 1.25rem;
   }
 
   #next-steps {
-    padding: 1.5em 1.25em;
+    padding: 1.5rem 1.25rem;
   }
 
   .draw-card-header {
     align-items: flex-start;
     flex-direction: column;
-    gap: 0.25em;
+    gap: 0.25rem;
   }
 }

@@ -35,7 +35,6 @@ function App() {
     try {
       const draws: DrawHistory[] = generateDraws(participants).map((draw) => ({
         id: crypto.randomUUID(),
-        createdAt: new Date().toISOString(),
         participants: draw,
       }))
 
@@ -78,7 +77,7 @@ function App() {
         <div className="draw-results">
           <h2>Historique des tirages</h2>
           <p className="draw-message">
-            Les 7 tirages de la dernière série sont affichés dans cette liste.
+            Les 7 derniers tirages sont affichés dans cette liste.
           </p>
           {error && (
             <p className="draw-message draw-error" role="alert">
