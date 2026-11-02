@@ -1,0 +1,34 @@
+{
+  "people": {
+    "devs": {
+      "app": [
+        "Alexandre M",
+        "Augustin",
+        "Ahlam",
+        "Fabrice",
+        "Nathan",
+        "François",
+        "Mickaël"
+      ],
+      "web": [
+        "Marie",
+        "Lenn",
+        "Amandine",
+        "Sébastien",
+        "Hamza",
+        "Gaetan",
+        "Alexandre G"
+      ]
+    },
+    "others":
+      [
+        "Alexander",
+        "Lucien",
+        "Sara",
+        "Damien",
+        "David",
+        "Benoit",
+        "Saliha"
+      ]
+  }
+}

@@ -1,0 +1,119 @@
+#center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 2.667em 1.333em;
+}
+
+.draw-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.667em;
+  width: min(100%, 28.889em);
+  text-align: left;
+}
+
+.draw-form h1,
+.draw-form > p {
+  text-align: center;
+}
+
+.draw-form h1 {
+  margin-bottom: 0.071em;
+}
+
+.draw-form > p {
+  margin-bottom: 0.667em;
+}
+
+.draw-form label {
+  color: var(--text-h);
+  font-size: 0.833em;
+  font-weight: 600;
+}
+
+.draw-form button {
+  align-self: center;
+  margin-top: 0.444em;
+  border: 0.056em solid var(--accent-border);
+  border-radius: 0.333em;
+  padding: 0.667em 1.111em;
+  color: var(--text-h);
+  background: var(--accent-bg);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.draw-form button:hover {
+  background: var(--accent-border);
+}
+
+.draw-form button:focus-visible {
+  outline: 0.111em solid var(--accent);
+  outline-offset: 0.111em;
+}
+
+#next-steps {
+  border-top: 0.056em solid var(--border);
+  padding: 1.778em;
+  text-align: center;
+}
+
+.draw-results h2 {
+  margin-bottom: 0.667em;
+}
+
+.draw-message {
+  color: var(--text);
+}
+
+.draw-error {
+  color: #b42318;
+}
+
+#spacer {
+  height: 2.667em;
+  border-top: 0.056em solid var(--border);
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+}
+
+.ticks::before,
+.ticks::after {
+  position: absolute;
+  top: -0.25em;
+  border: 0.278em solid transparent;
+  content: '';
+}
+
+.ticks::before {
+  left: 0;
+  border-left-color: var(--border);
+}
+
+.ticks::after {
+  right: 0;
+  border-right-color: var(--border);
+}
+
+@media (max-width: 40em) {
+  #center {
+    padding: 2em 1.25em;
+  }
+
+  #next-steps {
+    padding: 1.5em 1.25em;
+  }
+
+  .draw-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25em;
+  }
+}
